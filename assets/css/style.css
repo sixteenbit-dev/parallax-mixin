@@ -693,7 +693,7 @@ h1 { color: #008cba; font-weight: 700; }
 .site-header { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 400px; text-align: center; }
 .site-header .inner { margin-top: 175px; }
 
-.site-content { background-color: #fff; }
+.content { background-color: #fff; }
 
 .p2 { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 500px; text-align: center; }
 .p2 .inner { margin-top: 225px; }

@@ -8,7 +8,6 @@
 @import "normalize";
 
 @import "bourbon";
-@import "vars";
 
 @import "parallax";
 
@@ -27,7 +26,7 @@ h1 {
     @include parallax;
 }
 
-.site-content {
+.content {
     background-color: #fff;
 }
 
