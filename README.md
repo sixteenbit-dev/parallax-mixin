@@ -1,4 +1,4 @@
-parallax-mixin
+Parallax Mixin
 ==============
 
 Simple Sass mixin for parallax

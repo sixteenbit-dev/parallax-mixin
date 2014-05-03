@@ -1,0 +1,21 @@
+/*
+   Parallax Mixin
+   ========================================================================== */
+@mixin parallax($height: 400px) {
+    width: 100%;
+    margin-bottom: 30px;
+    background: {
+        repeat: no-repeat;
+        position: center center;
+        attachment: fixed;
+    };
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: $height;
+    text-align: center;
+    .inner {
+        margin-top: ($height - 50) / 2;
+    }
+}

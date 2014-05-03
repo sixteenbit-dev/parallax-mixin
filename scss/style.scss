@@ -1,0 +1,48 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "normalize";
+
+@import "bourbon";
+@import "vars";
+
+@import "parallax";
+
+// Behold, here are all the Foundation components.
+@import "foundation/components/grid";
+@import "foundation/components/buttons";
+@import "foundation/components/forms";
+@import "foundation/components/type";
+
+h1 {
+    color: $primary-color;
+    font-weight: 700;
+}
+
+.site-header {
+    @include parallax;
+}
+
+.site-content {
+    background-color: #fff;
+}
+
+.p2 {
+    @include parallax($height: 500px);
+}
+
+.p3 {
+    @include parallax($height: 600px);
+}
+
+.p4 {
+    @include parallax($height: 700px);
+}
+
+.p5 {
+    @include parallax($height: 800px);
+}
