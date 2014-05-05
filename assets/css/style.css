@@ -124,7 +124,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
-/* Parallax Mixin ========================================================================== */
 meta.foundation-version { font-family: "/5.2.2/"; }
 
 meta.foundation-mq-small { font-family: "/only screen/"; width: 0em; }
@@ -688,21 +687,63 @@ blockquote, blockquote p { line-height: 1.6; color: #6f6f6f; }
   .print-only { display: block !important; }
   .hide-for-print { display: none !important; }
   .show-for-print { display: inherit !important; } }
-h1 { color: #008cba; font-weight: 700; }
+body, html { height: 100%; min-height: 100%; background-color: #000000; }
 
-.site-header { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 400px; text-align: center; }
-.site-header .inner { margin-top: 175px; }
+.no-js { padding-top: 106px; }
 
-.content { background-color: #fff; }
+h2 { margin-top: 0; }
 
-.p2 { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 500px; text-align: center; }
-.p2 .inner { margin-top: 225px; }
+.loading { background: url("../img/ico_loading.gif") no-repeat center center; }
 
-.p3 { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 600px; text-align: center; }
-.p3 .inner { margin-top: 275px; }
+section { min-width: 960px; opacity: 0; }
 
-.p4 { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 700px; text-align: center; }
-.p4 .inner { margin-top: 325px; }
+.loaded section, .no-js section { opacity: 1; -webkit-transition: opacity 300ms ease-out; transition: opacity 300ms ease-out; }
 
-.p5 { width: 100%; margin-bottom: 30px; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; min-height: 800px; text-align: center; }
-.p5 .inner { margin-top: 375px; }
+main { overflow-x: hidden; }
+
+.bcg { background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 100%; width: 100%; }
+
+/* Slide 1 */
+#slide-1 .bcg { background-image: url("../img/bcg_slide-1.jpg"); }
+
+/* Slide 2 */
+#slide-2 .bcg { background: none; background-color: #010101; text-align: center; }
+
+/* Slide 3 */
+#slide-3 .bcg { background-image: url("../img/bcg_slide-3.jpg"); }
+#slide-3 .bcg2 { background-image: none; background-color: #000000; position: absolute; top: 0; left: 0; }
+
+/* Slide 4 */
+.curtainContainer { width: 100%; height: 100%; position: relative; }
+.curtainContainer .curtain { width: 300%; height: 1px; background-color: #000000; position: absolute; top: 25%; left: 0; opacity: 0; }
+.curtainContainer .copy { position: absolute; bottom: 30%; left: 0; width: 100%; text-align: center; }
+
+#slide-4 .bcg { background-image: url("../img/bcg_slide-4.jpg"); }
+
+/* Slide 5 */
+#slide-5 { position: relative; }
+#slide-5 .bcg { background-image: url("../img/bcg_slide-5.jpg"); }
+#slide-5 .bcg2 { background-image: url("../img/bcg_slide-5b.jpg"); position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 1; }
+#slide-5 .bcg3 { background: none; background-color: #010101; z-index: 2; position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 2; }
+
+.hsContainer { display: table; table-layout: fixed; width: 100%; height: 100%; overflow: hidden; position: relative; }
+
+.hsContent { max-width: 450px; margin: -150px auto 0 auto; display: table-cell; vertical-align: middle; color: #ebebeb; padding: 0 8%; text-align: center; position: relative; z-index: 10; }
+.hsContent h2 { color: #ffffff; font-size: 45px; line-height: 48px; margin-bottom: 12px; }
+
+.copy h2 { color: #ffffff; font-size: 45px; line-height: 48px; margin-bottom: 12px; }
+
+.hsContent p { width: 400px; margin: 0 auto; color: #b2b2b2; }
+.hsContent a { color: #b2b2b2; text-decoration: underline; }
+
+.bgBlack { background-color: rgba(0, 0, 0, 0.75); padding: 3px 10px; }
+
+/* Navigation */
+#slideNav { display: none; position: fixed; right: 0; top: 50%; margin-top: -80px; z-index: 11; }
+#slideNav ul { list-style: none; color: #000000; font-size: 13px; text-align: center; }
+#slideNav li { width: 50px; height: 50px; line-height: 50px; background-color: rgba(255, 255, 255, 0.7); margin-bottom: 1px; }
+
+.no-rgba #slideNav li { background-color: #ffffff; }
+
+#slideNav a { display: block; width: 50px; height: 50px; position: relative; overflow: hidden; text-decoration: none; color: #000000; }
+#slideNav a.disabled { cursor: default; }
