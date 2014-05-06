@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           {expand: true, flatten: true, src: ['bower_components/modernizr/modernizr.js'], dest: 'tmp/js/', filter: 'isFile'},
           {expand: true, flatten: true, src: ['bower_components/skrollr/src/skrollr.js'], dest: 'tmp/js/', filter: 'isFile'},
           {expand: true, flatten: true, src: ['bower_components/jquery-waypoints/waypoints.js'], dest: 'tmp/js/', filter: 'isFile'},
-          {expand: true, flatten: true, src: ['bower_components/imagesloaded/imagesloaded.js'], dest: 'tmp/js/', filter: 'isFile'}
+          {expand: true, flatten: true, src: ['bower_components/imagesloaded-packaged/imagesloaded.pkgd.js'], dest: 'tmp/js/', filter: 'isFile'}
         ]
       }
     },
@@ -54,7 +54,8 @@ module.exports = function(grunt) {
           "assets/js/vendor/modernizr.min.js": ["tmp/js/modernizr.js"],
           "assets/js/skrollr.min.js": ["tmp/js/skrollr.js"],
           "assets/js/waypoints.min.js": ["tmp/js/waypoints.js"],
-          "assets/js/imagesloaded.min.js": ["tmp/js/imagesloaded.js"]
+          "assets/js/imagesloaded.min.js": ["tmp/js/imagesloaded.pkgd.js"],
+          "assets/js/_main.js": ["src/js/_main.js"]
         }
       }
     },
