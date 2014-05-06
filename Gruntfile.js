@@ -55,7 +55,7 @@ module.exports = function(grunt) {
           "assets/js/skrollr.min.js": ["tmp/js/skrollr.js"],
           "assets/js/waypoints.min.js": ["tmp/js/waypoints.js"],
           "assets/js/imagesloaded.min.js": ["tmp/js/imagesloaded.pkgd.js"],
-          "assets/js/_main.js": ["src/js/_main.js"]
+          "assets/js/main.js": ["src/js/_main.js"]
         }
       }
     },
