@@ -36,6 +36,30 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      main: {
+        files: [
+          {expand: true, flatten: true, src: ['bower_components/modernizr/modernizr.js'], dest: 'tmp/js/', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['bower_components/skrollr/src/skrollr.js'], dest: 'tmp/js/', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['bower_components/jquery-waypoints/waypoints.js'], dest: 'tmp/js/', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['bower_components/imagesloaded-packaged/imagesloaded.pkgd.js'], dest: 'tmp/js/', filter: 'isFile'}
+        ]
+      }
+    },
+
+    // Uglify
+    uglify: {
+      min: {
+        files: {
+          "assets/js/vendor/modernizr.min.js": ["tmp/js/modernizr.js"],
+          "assets/js/skrollr.min.js": ["tmp/js/skrollr.js"],
+          "assets/js/waypoints.min.js": ["tmp/js/waypoints.js"],
+          "assets/js/imagesloaded.min.js": ["tmp/js/imagesloaded.pkgd.js"],
+          "assets/js/main.js": ["src/js/_main.js"]
+        }
+      }
+    },
+
     // Imagemin
     imagemin: {
       img: {
@@ -89,8 +113,15 @@ module.exports = function(grunt) {
     'autoprefixer'
   ]);
 
+  // register task
+  grunt.registerTask('scripts', [
+    'copy',
+    'uglify'
+  ]);
+
   grunt.registerTask('default', [
     'stylesheets',
+    'scripts',
     'watch'
   ]);
 };

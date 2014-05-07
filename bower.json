@@ -4,6 +4,9 @@
   "private": "true",
   "dependencies": {
     "bourbon": "~3.1.8",
-    "foundation": "~5.2.2"
+    "foundation": "~5.2.2",
+    "skrollr": "~0.6.24",
+    "jquery-waypoints": "~2.0.5",
+    "imagesloaded-packaged": "~3.1.4"
   }
 }
